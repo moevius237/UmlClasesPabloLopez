@@ -3,8 +3,9 @@ class miembro{
 }
 class boardmember{
 }
-class Evento{
-}
+class Evento
+Evento <-- Conferencia
+Evento <-- boardmeeting
 class Conferencia{
 }
 class boardmeeting{
