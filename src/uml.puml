@@ -1,16 +1,22 @@
 @startuml
-class miembro{
-}
-class boardmember{
-}
+class miembro
+miembro <-- boardmember
+persona <-- miembro
+
+class boardmember
+boardmember -- boardmeeting
 class Evento
+Evento -- miembro
 Evento <-- Conferencia
-Evento <-- boardmeeting
-class Conferencia{
-}
-class boardmeeting{
-}
-class localizacion{
-}
-class persona{}
+class Conferencia
+Conferencia -- persona
+class boardmeeting
+boardmeeting --> Evento
+class localizacion
+localizacion -- Evento
+class persona
+class aauoc
+aauoc o-- localizacion
+aauoc o-- persona
+aauoc o-- Evento
 @enduml
